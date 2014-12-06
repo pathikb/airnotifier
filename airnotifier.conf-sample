@@ -10,4 +10,4 @@ mongohost = "localhost"
 mongoport = 27017
 
 masterdb = "airnotifier"
-dbprefix = "obj_"
+dbprefix = "app_"

@@ -58,7 +58,7 @@ class WebBaseHandler(tornado.web.RequestHandler):
     @property
     def db(self):
         """ DB instance """
-        return self.application.mongodb[self.appname]
+        return self.application.mongodb["%s%s" % (options.dbprefix, self.appname)]
 
     @property
     def mongodbconnection(self):

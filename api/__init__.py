@@ -133,7 +133,7 @@ class APIBaseHandler(tornado.web.RequestHandler):
     @property
     def db(self):
         """ App DB, store logs/objects/users etc """
-        return self.application.mongodb[self.appname]
+        return self.application.mongodb["%s%s" % (options.dbprefix, self.appname)]
 
     @property
     def masterdb(self):
